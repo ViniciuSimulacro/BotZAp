@@ -21,17 +21,14 @@ for item in send_list:
     contatos.append(item)
 
 
-msg_imagem = '*Haduken*'
-imagem = 'haduken.jpeg'
+msg_imagem = 'Olá, eu sou o Vinicius, muito prazer! Vi que vocês estão recrutando pessoas e gostaria de enviar meu currículo. Já trabalhei com atendimento ao cliente, bartender, copeiro, garçom, entre outras coisas que você pode ver no currículo. Estou a disposição para freelances aos fins de semana ou cobertura de folgas dos fixos, mas também busco uma vaga fixa. Caso haja interesse aguardo o contato para conversar. Obrigado pela atenção e tenha um ótimo dia de trabalho!'   
+imagem = 'Vinicius Teixeira de Oliveira de Lucca - Curriculo.jpg'
 
 while len(contatos)>= 1:
     telefone = contatos[0][0]
-    mensagem = f'Teste feito pelo Simulacro Web, gostou {contatos[0][1]}?'
-    pywhatkit.sendwhats_image(contatos[0][0], imagem , msg_imagem,20)
-    time.sleep(5)
-    keyboard.press_and_release('ctrl + W')
-    pywhatkit.sendwhatmsg(contatos[0][0],mensagem,datetime.now().hour, datetime.now().minute+1)
-    time.sleep(5)
+    #mensagem = f'Teste feito pelo Simulacro Web, gostou {contatos[0][1]}?'
+    pywhatkit.sendwhats_image(contatos[0][0], imagem , msg_imagem,45)
+    time.sleep(15)
     keyboard.press_and_release('ctrl + W')
     del contatos[0]
 
